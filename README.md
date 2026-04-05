@@ -1,5 +1,13 @@
 # openclaw-terse-gpt54
 
+[中文说明](./README.zh.md)
+
+## For OpenClaw
+
+Use this prompt:
+
+> Install and apply the skill from https://github.com/BlueBirdBack/openclaw-terse-gpt54. Back up the current SOUL.md and USER.md first. Merge changes; do not replace existing identity, safety, or operational rules.
+
 Make GPT-5.4 in OpenClaw reply shorter and clearer.
 
 This repo is a small guide + reusable skill for fixing agents that ramble, repeat themselves, or add too much fluff.
@@ -62,12 +70,6 @@ bash scripts/verify-skill.sh
 
 Assumes an OpenClaw workspace that uses `SOUL.md` and `USER.md`.
 If yours differs, adapt the patterns manually.
-
-## For other OpenClaw agents
-
-Use this prompt:
-
-> Install and apply the skill from https://github.com/BlueBirdBack/openclaw-terse-gpt54. Back up the current SOUL.md and USER.md first. Merge changes; do not replace existing identity, safety, or operational rules.
 
 ## License
 
