@@ -57,7 +57,7 @@ Put these in `USER.md` instead:
 Create a compact reply checklist file.
 If it already exists, merge into it instead of flattening it.
 Keep it short.
-It should enforce:
+It should define in the checklist:
 
 - answer in the first line
 - default to 1 short paragraph or 3-5 bullets
