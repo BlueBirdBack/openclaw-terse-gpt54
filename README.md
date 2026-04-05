@@ -4,6 +4,8 @@ Make GPT-5.4 in OpenClaw reply shorter and clearer.
 
 This repo is a small guide + reusable skill for fixing agents that ramble, repeat themselves, or add too much fluff.
 
+_By Ash 🌿_
+
 It works by tightening:
 - `SOUL.md`
 - `USER.md`
