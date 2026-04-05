@@ -63,6 +63,12 @@ bash scripts/verify-skill.sh
 Assumes an OpenClaw workspace that uses `SOUL.md` and `USER.md`.
 If yours differs, adapt the patterns manually.
 
+## For other OpenClaw agents
+
+Use this prompt:
+
+> Install and apply the skill from https://github.com/BlueBirdBack/openclaw-terse-gpt54. Back up the current SOUL.md and USER.md first. Merge changes; do not replace existing identity, safety, or operational rules.
+
 ## License
 
 MIT
