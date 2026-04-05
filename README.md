@@ -2,13 +2,16 @@
 
 Make `openai-codex/gpt-5.4` in OpenClaw reply with less fluff.
 
+This repo improves behavior through **prompt structure and file layout**.
+It does **not** add runtime enforcement, validators, hooks, or reply linting inside OpenClaw itself.
+
 This is **not** one magic prompt.
 It is a small stack:
 
 1. tighten `SOUL.md`
 2. move user-specific prefs into `USER.md`
-3. add a hard `RESPONSE_PROTOCOL.md`
-4. add a pre-send **Response Gate**
+3. add `RESPONSE_PROTOCOL.md` as a reply checklist
+4. add a prompt-side **Response Gate** checklist
 5. keep memory lean enough to trust
 
 ## What worked
@@ -29,11 +32,11 @@ Keep the soul clean.
 
 - `SOUL.md` = identity, style, response discipline
 - `USER.md` = user-specific working preferences
-- `RESPONSE_PROTOCOL.md` = hard reply checklist
+- `RESPONSE_PROTOCOL.md` = compact reply checklist
 
-### 3) Add a hard response gate
+### 3) Add a prompt-side response gate
 
-Before every reply, force this check:
+Before every reply, use this checklist:
 
 - Is the answer in the first line?
 - Can this be 1 short paragraph or 3–5 bullets?
@@ -61,22 +64,58 @@ A fresh `/new` helps because the updated files become the clean baseline from tu
 
 - `SOUL.md`
 - `USER.md`
-- `RESPONSE_PROTOCOL.md` *(new)*
+- `RESPONSE_PROTOCOL.md` *(new or tightened)*
 - optional: `MEMORY.md` / daily memory if you want to record the preference permanently
+
+## Safe patching rules
+
+- **Merge, don’t replace.**
+- Preserve stronger local safety, escalation, and operational constraints.
+- Prefer targeted section edits over whole-file rewrites.
+- Keep backups before editing.
+- Keep diffs small and rollback easy.
+- Replace a whole file only if the user explicitly asks.
 
 ## Included in this repo
 
-- `templates/` — generic file templates
-- `skills/openclaw-terse/` — reusable skill for tightening verbose OpenClaw agents
+- `templates/` — manual templates and examples to adapt into local files
+- `skills/openclaw-terse/` — source for the packaged skill
+- `dist/openclaw-terse.skill` — packaged artifact containing only:
+  - `openclaw-terse/SKILL.md`
+  - `openclaw-terse/references/patch-patterns.md`
+
+The packaged `.skill` does **not** include `templates/`.
 
 ## Install the idea manually
 
 1. back up `SOUL.md` and `USER.md`
-2. apply the patterns from `templates/`
-3. create `RESPONSE_PROTOCOL.md`
+2. patch the existing files using the patterns from `templates/`
+3. create or tighten `RESPONSE_PROTOCOL.md`
 4. start a fresh session
 5. test on 3 real prompts
 6. tighten again if it still rambles
+
+## Packaging and verification
+
+Build the packaged skill:
+
+```bash
+bash scripts/build-skill.sh
+```
+
+Verify that `dist/openclaw-terse.skill` matches source:
+
+```bash
+bash scripts/verify-skill.sh
+```
+
+The build script writes a SHA-256 checksum to `dist/openclaw-terse.skill.sha256`.
+The verify script rebuilds the artifact in a temp directory and fails if it drifts from source.
+
+## Compatibility
+
+Assumes an OpenClaw workspace that uses `SOUL.md` and `USER.md`.
+If your setup differs, adapt the patterns manually.
 
 ## Why this works
 
@@ -98,8 +137,8 @@ It tells the agent to:
 - back up current files
 - harden `SOUL.md`
 - keep user preferences in `USER.md`
-- create `RESPONSE_PROTOCOL.md`
-- add a response gate
+- create or tighten `RESPONSE_PROTOCOL.md`
+- add a prompt-side response checklist
 - avoid bloating memory
 
 ## License

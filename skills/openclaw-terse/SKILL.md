@@ -7,6 +7,7 @@ description: Make an OpenClaw agent concise and low-fluff by tightening persona 
 
 Tighten the agent structurally.
 Do not rely on one vague line like "be concise."
+This is **prompt-side guidance**, not runtime enforcement.
 
 ## Workflow
 
@@ -18,7 +19,15 @@ Before editing, back up:
 - `USER.md`
 - existing `RESPONSE_PROTOCOL.md` if present
 
-### 2. Harden `SOUL.md`
+### 2. Patch, don’t replace
+
+- Merge into existing local files.
+- Preserve stronger local safety, escalation, and operational constraints.
+- Prefer targeted section edits over whole-file replacement.
+- Keep diffs small and rollback easy.
+- Replace a whole file only if the user explicitly asks.
+
+### 3. Harden `SOUL.md`
 
 Add or strengthen these rules:
 
@@ -32,7 +41,7 @@ Add or strengthen these rules:
 
 Add a **Response Gate** section with a pre-send checklist.
 
-### 3. Keep user-specific preferences in `USER.md`
+### 4. Keep user-specific preferences in `USER.md`
 
 Do not bloat `SOUL.md` with user-specific settings.
 Put these in `USER.md` instead:
@@ -43,9 +52,10 @@ Put these in `USER.md` instead:
 - brevity preference
 - attribution preference
 
-### 4. Create `RESPONSE_PROTOCOL.md`
+### 5. Create or tighten `RESPONSE_PROTOCOL.md`
 
-Create a compact hard rule file.
+Create a compact reply checklist file.
+If it already exists, merge into it instead of flattening it.
 Keep it short.
 It should enforce:
 
@@ -55,7 +65,7 @@ It should enforce:
 - trim pass before send
 - stop once the job is done
 
-### 5. Prefer structural edits over adjectives
+### 6. Prefer structural edits over adjectives
 
 Weak:
 - "be concise"
@@ -69,12 +79,12 @@ Strong:
 - cut one non-essential sentence before sending
 - stop when solved
 
-### 6. Keep memory lean
+### 7. Keep memory lean
 
 If the conversation produces a durable user preference, store it.
 Do not dump transient meta-chatter into long-term memory.
 
-### 7. Recommend a fresh session
+### 8. Recommend a fresh session
 
 After patching, recommend a fresh `/new` for the cleanest effect.
 
@@ -94,4 +104,5 @@ Bad result:
 
 ## Reference
 
-Read `references/patch-patterns.md` when you need copy-ready wording for the files.
+Read `references/patch-patterns.md` when you need copy-ready wording.
+Adapt it conservatively to the existing local files.

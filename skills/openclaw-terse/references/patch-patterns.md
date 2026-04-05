@@ -3,6 +3,10 @@
 Use these as building blocks.
 Adapt them to the user's agent instead of pasting blindly.
 
+Keep stronger existing local safety, escalation, and operational rules.
+Patch targeted sections.
+Do not replace whole files unless the user explicitly asks.
+
 ## SOUL.md headline
 
 **Default short. Depth only on request.**
