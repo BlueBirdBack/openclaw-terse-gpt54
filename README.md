@@ -57,6 +57,8 @@ Only delete `RESPONSE_PROTOCOL.md` entirely if it did not exist before the patch
 - default short
 - expand only when needed
 - remove praise, recap, and prompt-echo
+- do obvious low-risk internal bookkeeping automatically after the main task
+- ask only for destructive, external/public, or genuinely ambiguous follow-up
 - stop when the answer is done
 
 ## Patch safely

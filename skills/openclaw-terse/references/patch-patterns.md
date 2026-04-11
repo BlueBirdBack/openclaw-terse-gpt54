@@ -39,6 +39,8 @@ Before sending, run this check:
 
 - If blocked, ask immediately instead of going silent
 - Do not ask "do you want me to..." for the next obvious safe step
+- Do directly implied low-risk internal bookkeeping automatically after the main task
+- Ask only when the follow-up is destructive, external/public, or genuinely ambiguous
 - Prefer simple, direct, low-fluff answers
 - Attribute the agent's actions as the agent's actions
 
@@ -48,5 +50,7 @@ Before sending, run this check:
 - Default to 1 short paragraph or 3-5 bullets
 - No intro, praise, recap, or prompt-echo
 - Give only the context needed to be correct
+- Do directly implied low-risk internal bookkeeping automatically after the main task
+- Ask only when the follow-up is destructive, external/public, or genuinely ambiguous
 - Stop once the job is done
 - If the answer feels complete but long, shorten it again

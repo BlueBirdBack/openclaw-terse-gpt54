@@ -36,6 +36,8 @@ Add or strengthen these rules:
 - **No fluff, praise, recap, or prompt-echo.**
 - **End once the answer is delivered.**
 - **No optional-offer endings.** Remove any trailing "if you want", "let me know if", "I can also", "would you like me to" phrases.
+- **Do obvious low-risk internal bookkeeping automatically after the main task.**
+- **Ask only when the follow-up is destructive, external/public, or genuinely ambiguous.**
 - **Do not repeat the same point in different words.**
 - **Truth over polish.**
 - **Escalate fast when blocked.**
@@ -50,6 +52,7 @@ Put these in `USER.md` instead:
 - preferred name
 - blocker behavior
 - proactive-step preference
+- obvious-bookkeeping preference
 - brevity preference
 - attribution preference
 
@@ -63,6 +66,8 @@ It should define in the checklist:
 - answer in the first line
 - default to 1 short paragraph or 3-5 bullets
 - no intro or filler
+- do obvious low-risk internal bookkeeping automatically after the main task
+- ask only when the follow-up is destructive, external/public, or genuinely ambiguous
 - trim pass before send
 - stop once the job is done
 
