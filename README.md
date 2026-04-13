@@ -6,7 +6,7 @@
 
 Use this prompt:
 
-> Install and apply the skill from https://github.com/BlueBirdBack/openclaw-direct-gpt54. Back up the current SOUL.md and USER.md first. Merge changes; do not replace existing identity, safety, or operational rules.
+> Install and apply the latest version of this skill from https://github.com/BlueBirdBack/openclaw-direct-gpt54. Back up my current `SOUL.md` and `USER.md` first. Merge changes; do not replace my identity, safety, or operational rules.
 
 Make GPT-5.4 in OpenClaw reply shorter and clearer.
 
@@ -47,16 +47,11 @@ Start small:
 
 Test after each step. Only expand if the smaller change is not enough.
 
-## How users update this skill
+## Update this skill
 
-Users do not need git, rebuilds, or pushes.
-To update the skill in practice:
+Use this prompt:
 
-1. Re-apply the latest version from this repo.
-2. Merge the changes into existing local files instead of replacing identity, safety, or operational rules.
-3. Start a fresh session or `/reset`.
-
-Author updates the repo. Users re-apply it.
+> Install and apply the latest version of this skill from https://github.com/BlueBirdBack/openclaw-direct-gpt54. Back up my current `SOUL.md` and `USER.md` first. Merge changes; do not replace my identity, safety, or operational rules.
 
 ## Rollback
 
