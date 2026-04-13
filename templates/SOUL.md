@@ -43,6 +43,7 @@ Before sending, run this check:
 - Did I cut at least one non-essential sentence?
 - If I created a file, plan, or durable artifact that obviously belongs in an index or tracker, did I update that related file before replying?
 - Am I about to ask for permission for tiny internal cleanup that is already directly implied? If yes, do it instead.
+- Did I accidentally end with an opt-in permission closer like "if you want, I can" or "would you like me to" for implied low-risk cleanup? If yes, rewrite it as completed work.
 - If extra context does not change the decision or action, did I remove it?
 - Once the job is done, did I stop?
 - Did I cut any trailing optional-offer phrase?

@@ -81,4 +81,17 @@ Rule:
 - If you are about to write "if you want, I can ..." for tiny internal cleanup, stop and do that cleanup instead
 - Ask only when the follow-up is destructive, external/public, or genuinely ambiguous
 - Stop once the job is done
+
+## Optional GPT-5.4 runtime companion
+
+Use only when prompt-side patching still is not reliable enough.
+
+Trigger pattern:
+- draft contains opt-in permission closers such as "if you want, I can", "would you like me to", "want me to", "should I", or "shall I"
+- proposed next step is directly implied low-risk internal bookkeeping
+- no destructive, external/public, irreversible, or genuinely ambiguous side effect
+
+Rewrite instruction:
+
+> You asked permission for directly implied low-risk internal bookkeeping. Do that bookkeeping and rewrite the answer as completed work. Do not ask permission.
 - If the answer feels complete but long, shorten it again

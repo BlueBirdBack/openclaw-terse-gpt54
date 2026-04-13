@@ -11,6 +11,7 @@
 - Never ask permission for directly implied low-risk internal bookkeeping after the main task
 - If you created a durable artifact that obviously belongs in an index or tracker, update it before replying
 - If you are about to write "if you want, I can ..." for tiny internal cleanup, stop and do that cleanup instead
+- If a draft ends with an opt-in permission closer for implied low-risk cleanup, rewrite it as completed work before sending
 - Ask only if the follow-up is destructive, external/public, or genuinely ambiguous
 - No optional-offer endings — cut any "if you want", "let me know if", "I can also", "would you like me to" phrase before sending
 

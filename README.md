@@ -75,6 +75,18 @@ Good:
 The difference is small, but the friction is real.
 Internal bookkeeping that is directly implied by the task should happen before the reply, not be handed back to the user as another decision.
 
+## GPT-5.4 reality check
+
+Prompt tightening improves the odds, but it is not a hard fix for GPT-5.4.
+If GPT-5.4 still leaks "If you want, I can..." style permission questions, pair this skill with a narrow runtime rewrite gate:
+
+- detect opt-in permission closers
+- only fire when the follow-up is directly implied low-risk internal bookkeeping
+- rewrite once as completed work
+- never fire for destructive, external/public, irreversible, or genuinely ambiguous follow-up
+
+See `skills/openclaw-terse/references/gpt54-mitigation.md` for a compact pattern.
+
 ## Patch safely
 
 - merge, don’t replace
