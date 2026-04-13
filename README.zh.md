@@ -1,4 +1,4 @@
-# openclaw-terse-gpt54
+# openclaw-direct-gpt54
 
 [English](./README.md)
 
@@ -8,7 +8,7 @@
 
 可以直接使用这段 prompt：
 
-> 安装并应用这个 skill：https://github.com/BlueBirdBack/openclaw-terse-gpt54 。先备份当前的 SOUL.md 和 USER.md。合并修改，不要替换现有的身份设定、安全规则或运维规则。
+> 安装并应用这个 skill：https://github.com/BlueBirdBack/openclaw-direct-gpt54 。先备份当前的 SOUL.md 和 USER.md。合并修改，不要替换现有的身份设定、安全规则或运维规则。
 
 让 OpenClaw 里的 GPT-5.4 回答更短、更清楚。
 

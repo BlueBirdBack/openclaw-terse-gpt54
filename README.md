@@ -1,4 +1,4 @@
-# openclaw-terse-gpt54
+# openclaw-direct-gpt54
 
 [中文说明](./README.zh.md)
 
@@ -6,7 +6,7 @@
 
 Use this prompt:
 
-> Install and apply the skill from https://github.com/BlueBirdBack/openclaw-terse-gpt54. Back up the current SOUL.md and USER.md first. Merge changes; do not replace existing identity, safety, or operational rules.
+> Install and apply the skill from https://github.com/BlueBirdBack/openclaw-direct-gpt54. Back up the current SOUL.md and USER.md first. Merge changes; do not replace existing identity, safety, or operational rules.
 
 Make GPT-5.4 in OpenClaw reply shorter and clearer.
 
